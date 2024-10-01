@@ -118,6 +118,21 @@ def main():
             print(outputLine)
             sentiment = new_sentiment
             num += 1
+
+    # Ask user if they want to save
+    save = str(input("\nWould you like to save the result? (y/n): "))
+    while True:
+        if save == 'y':
+            s = open("CutUp.txt", "w")
+            s.write(joinPhrases(phrases, max_words))
+            s.close()
+            print("File saved!")
+            break
+        elif save == 'n':
+            print("Thank you for using CutUp!")
+            break
+        else:
+            print("Please enter either 'y' or 'n'.")
     
     input("Press Enter to exit.")
 
