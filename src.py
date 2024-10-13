@@ -123,10 +123,12 @@ def main():
     save = str(input("\nWould you like to save the result? (y/n): "))
     while True:
         if save == 'y':
-            s = open("CutUp.txt", "w")
+            s = open("CutUp.txt", "a")
+            s.write('\n\n')
             s.write(joinPhrases(phrases, max_words))
             s.close()
             print("File saved!")
+            print("Thank you for using CutUp!")
             break
         elif save == 'n':
             print("Thank you for using CutUp!")
