@@ -98,12 +98,13 @@ def main():
             break
 
 
-    # Print first random line
-    randomLine = getRandomLine(text_folder, max_words)
-    sentiment = analyze_sentiment(randomLine)
-    if not randomLine:
+    # Generate first random line
+    userLine = str(input("Enter a phrase: "))
+    userPoem.analyzeSentiment(userLine)
+    if not userLine:
         print('No lines found.')
         return
+    lastLine = userLine
 
     print(randomLine)
 
