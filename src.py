@@ -100,7 +100,7 @@ def main():
 
     # Generate first random line
     userLine = str(input("Enter a phrase: "))
-    userPoem.analyzeSentiment(userLine)
+    sentiment = analyzeSentiment(userLine)
     if not userLine:
         print('No lines found.')
         return
