@@ -1,5 +1,5 @@
 """
-this is a program of the cut-up technique.Future plans: make main function WAY better,
+this is a program of the cut-up technique. Future plans: make main function WAY better,
 find words with similar emotions of last line. Made by Tyla :)
 """
 
@@ -130,10 +130,8 @@ def main():
         s.close()
         print("File saved!")
         print("Thank you for using CutUp!")
-        break
     elif save == 'n':
         print("Thank you for using CutUp!")
-        break
     else:
         print("Please enter either 'y' or 'n'.")
     
