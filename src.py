@@ -121,21 +121,21 @@ def main():
             num += 1
 
     # Ask user if they want to save
-    save = str(input("\nWould you like to save the result? (y/n): "))
-    while True:
-        if save == 'y':
-            s = open("CutUp.txt", "a")
-            s.write('\n\n')
-            s.write(joinPhrases(phrases, max_words))
-            s.close()
-            print("File saved!")
-            print("Thank you for using CutUp!")
-            break
-        elif save == 'n':
-            print("Thank you for using CutUp!")
-            break
-        else:
-            print("Please enter either 'y' or 'n'.")
+    save = str(input("\nWould you like to save the result? (y/n): ").lower)
+
+    if save == 'y':
+        s = open("CutUp.txt", "a")
+        s.write('\n\n')
+        s.write(joinPhrases(phrases, max_words))
+        s.close()
+        print("File saved!")
+        print("Thank you for using CutUp!")
+        break
+    elif save == 'n':
+        print("Thank you for using CutUp!")
+        break
+    else:
+        print("Please enter either 'y' or 'n'.")
     
     input("Press Enter to exit.")
 
