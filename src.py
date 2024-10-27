@@ -138,7 +138,7 @@ def main():
             break
 
     # Generate first random line
-    if clusterStyle == '2' or clusterStyle == 'thematic':
+    if style == '2' or style == 'thematic':
         userLine = str(input("Enter a phrase: "))
         sentiment = analyzeSentiment(userLine)
         if not userLine:
