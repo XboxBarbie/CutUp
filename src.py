@@ -138,12 +138,17 @@ def main():
             break
 
     # Generate first random line
-    userLine = str(input("Enter a phrase: "))
-    sentiment = analyzeSentiment(userLine)
-    if not userLine:
-        print('No lines found.')
-        return
-    lastLine = userLine
+    if clusterStyle == '2' or clusterStyle == 'thematic':
+        userLine = str(input("Enter a phrase: "))
+        sentiment = analyzeSentiment(userLine)
+        if not userLine:
+            print('No lines found.')
+            return
+        lastLine = userLine
+    else:
+        randomLine = getRandomLine(text_folder, max_words)
+        sentiment = analyzeSentiment(randomLine)
+        lastLine = randomLine
 
     num = 1
     while (num < max_lines):
