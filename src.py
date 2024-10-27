@@ -182,8 +182,6 @@ def main():
         else:
             print("Please enter either 'y' or 'n'.")
 
-    input("\nPress Enter to exit.")
-
 
 if __name__ == "__main__":
     main()
